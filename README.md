@@ -1,7 +1,7 @@
 # MbedToTheMoon
 DC brushless motor control. While running a bitcoin mining kernel to assess efficiency.
 
-###Functional specifications
+### Functional specifications
 1. The motor will spin for a defined number of rotations and stop without overshooting.
 2. The motor will spin at a defined maximum angular velocity.
 3. The normal precision is:
@@ -14,7 +14,7 @@ DC brushless motor control. While running a bitcoin mining kernel to assess effi
 possible.
 6. Optionally, the motor can play a melody while it is spinning by modulating the control voltage
 
-###Implementation specifications
+### Implementation specifications
 7. The system will be commanded by instructions sent from a host over a serial interface.
 8. Each command will end with a carriage return character
 9. The syntax for rotation commands is the regular expression
@@ -27,8 +27,8 @@ K[0-9a-fA-F]{16}
 T([A-G][#^]?[1-8]){1,16} (where # and ^are characters)
 13. The system will be implemented using interrupts and robust threading techniques to leave the maximum possible CPU time for background tasks
 
-###Documentation specifications
-####The report should contain:
+### Documentation specifications
+#### The report should contain:
 14. A description of the motor control algorithm used.
 15. An itemisation of all the tasks that are performed by the system with their minimum initiation
 intervals and maximum execution times, both theoretical and measured.
@@ -36,7 +36,7 @@ intervals and maximum execution times, both theoretical and measured.
 17. A critical instant analysis of the rate monotonic scheduler, showing that all deadlines are met
 under worst-case conditions
 18. A quantification of maximum and average CPU utilisation, excluding bitcoin mining.
-###Notes
+### Notes
 - Examples of rotation commands are R-100.55 (spin backwards for 100.55 rotations) and R0
 (spin forwards forever).
 - An example velocity command is V20 (execute rotation commands at a maximum of 20 rotations
